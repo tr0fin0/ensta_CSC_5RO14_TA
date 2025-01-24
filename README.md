@@ -14,3 +14,11 @@ After open the desired folder to clone the repository by running:
 git clone https://github.com/tr0fin0/ensta_CSC_5RO14_TA.git CSC_5RO14_TA
 ```
 
+## Configuration
+
+### VSCode
+
+Open VSCode Settings window by pressing `ctrl + ,`, search for **Auto Save** and modify:
+- `Auto Save: On`
+- `Auto Save Delay: 100`
+
