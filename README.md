@@ -22,3 +22,10 @@ Open VSCode Settings window by pressing `ctrl + ,`, search for **Auto Save** and
 - `Auto Save: On`
 - `Auto Save Delay: 100`
 
+### Git
+
+Open a terminal with `ctrl + shift + T` and run:
+```bash
+git config --global user.name "<USER NAME>"
+git config --global user.email "<USER EMAIL>"
+```
