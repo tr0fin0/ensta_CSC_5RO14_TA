@@ -2,7 +2,6 @@
 Hardware and Software architecture for robotics.
 
 ## Installation
-Follow Emmanuel BATTESTI instructions [here](https://perso.ensta-paris.fr/~battesti/website/teaching/rob314/). Then open a terminal with `ctrl + shift + T` and run: 
 
 ```bash
 sudo apt install code
@@ -14,18 +13,13 @@ After open the desired folder to clone the repository by running:
 git clone https://github.com/tr0fin0/ensta_CSC_5RO14_TA.git CSC_5RO14_TA
 ```
 
-## Configuration
+Then install the projects requirements with:
 
-### VSCode
-
-Open VSCode Settings window by pressing `ctrl + ,`, search for **Auto Save** and modify:
-- `Auto Save: On`
-- `Auto Save Delay: 100`
-
-### Git
-
-Open a terminal with `ctrl + shift + T` and run:
 ```bash
-git config --global user.name "<USER NAME>"
-git config --global user.email "<USER EMAIL>"
+chmod +755 installation.sh
+./installation.sh
 ```
+
+File built from instructions presented [here](https://github.com/ailabspace/turtlebot2-noetic/blob/main/install.md). Different verification files may be found in [verification](./docs/verification.md).
+
+## Usage
