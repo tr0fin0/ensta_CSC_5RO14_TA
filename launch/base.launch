@@ -1,0 +1,23 @@
+<launch>
+  <!-- PS3 Teleoperation -->
+  <include file="$(find turtlebot_teleop)/launch/ps3_teleop.launch"/>
+
+  <!-- NatNet Motion Capture -->
+  <include file="$(find natnet_ros_cpp)/launch/natnet_ros.launch"/>
+
+  <!-- FlagPublisher -->
+  <node 
+    pkg="flag_package" 
+    type="FlagPublisher.py" 
+    name="flag_publisher" 
+    output="screen"
+  />
+
+  <!-- RViz Preconfigured -->
+  <node 
+    pkg="rviz" 
+    type="rviz" 
+    name="rviz" 
+    args="-d $(find flag_package)/rviz/config.rviz"
+  />
+</launch>
