@@ -1,0 +1,43 @@
+<launch>
+    <!-- TurtleBot -->
+    <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+    <include file="$(find turtlebot_bringup)/launch/3dsensor.launch"/>
+
+    <!-- Mapping -->
+    <node 
+        pkg="autonomous_navigation"
+        type="MapBuilder.py"
+        name="map_builder"
+        output="screen"
+    />
+  
+    <!-- Navigation -->
+    <node
+        pkg="autonomous_navigation"
+        type="AStarPlanner.py"
+        name="astar_planner"
+        output="screen"
+    >
+        <param name="expansion_radius" value="0.3"/>
+        <param name="obstacle_threshold" value="50"/>
+    </node>
+
+    <node
+        pkg="autonomous_navigation"
+        type="PIDController.py"
+        name="pid_controller"
+        output="screen"
+    >
+        <rosparam command="load" file="$(find autonomous_navigation)/cfg/parameters.yaml"/>
+    </node>
+
+    <!-- Sensor Processing -->
+    <node
+        pkg="depthimage_to_laserscan"
+        type="depthimage_to_laserscan"
+        name="depth_to_laser"
+    >
+        <remap from="image" to="/camera/depth/image_raw"/>
+        <param name="output_frame_id" value="camera_depth_frame"/>
+    </node>
+</launch>
