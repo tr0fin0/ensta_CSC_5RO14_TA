@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>autonomous_navigation</name>
+  <version>1.0.0</version>
+  <description>CSC_5RO14_TA project autonomous_navigation ROS package</description>
+
+  <maintainer email="guilherme.trofino@ensta.fr">Guilherme TROFINO</maintainer>
+  <license>GPLv3</license>
+
+
+  <url type="website">https://github.com/tr0fin0/ensta_CSC_5RO14_TA</url>
+
+  <author email="guilherme.trofino@ensta.fr">Guilherme TROFINO</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>depthimage_to_laserscan</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf</depend>
+  <depend>turtlebot_bringup</depend>
+  <depend>turtlebot_teleop</depend>
+  
+  <exec_depend>map_server</exec_depend>
+</package>
