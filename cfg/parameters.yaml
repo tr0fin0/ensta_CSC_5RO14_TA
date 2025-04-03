@@ -1,0 +1,11 @@
+pid_controller:
+  kp_linear: 0.5
+  ki_linear: 0.01
+  kd_linear: 0.1
+  kp_angular: 1.0
+  ki_angular: 0.01
+  kd_angular: 0.2
+  lookahead_distance: 0.3
+  max_linear_speed: 0.3
+  max_angular_speed: 0.5
+  control_rate: 10.0
