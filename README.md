@@ -23,3 +23,59 @@ chmod +755 installation.sh
 File built from instructions presented [here](https://github.com/ailabspace/turtlebot2-noetic/blob/main/install.md). Different verification files may be found in [verification](./docs/verification.md).
 
 ## Usage
+
+
+
+
+
+\
+
+
+
+
+create a catkin package
+
+$ cd ~/catkin_ws/src/
+$ catkin_create_pkg autonomous_navigation rospy tf2_ros sensor_msgs nav_msgs
+
+
+
+
+
+cd ~/catkin_ws && caktin_make
+source devel/setup.bash
+
+
+
+rosnode list
+rosnode info /<node>
+rostopic echo /<topic>
+top -i
+
+
+
+
+
+\
+
+
+
+
+
+
+
+Camera
+
+Open Terminal 1
+roscore
+
+Open Terminal 2
+roslaunch openni2_launch openni2.launch
+
+Open Terminal 3
+In the “rqt” window select “Plugins” -> “Visualization” -> “Image View“
+rqt
+
+https://gist.github.com/tzutalin/175776fe02a9496a7778
+
+
