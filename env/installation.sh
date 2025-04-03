@@ -18,6 +18,7 @@ sudo apt install -y libusb-dev libftdi-dev liborocos-kdl-dev \
   ros-noetic-openni-description ros-noetic-openni-launch ros-noetic-openni2-launch 
 
 sudo apt install -y python-is-python3 python3-pip
+sudo apt-get install catkin_lint
 
 # Step 4: Clone Repositories
 echo "Cloning TurtleBot repositories..."
